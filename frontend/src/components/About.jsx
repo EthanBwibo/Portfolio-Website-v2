@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, BookOpen, Calendar, Mail, Phone } from 'lucide-react';
-import Image from 'next/image';
 
 const STATS = [
   { value: '10+', label: 'Projects Built' },
