@@ -1,3 +1,6 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/api/spotify/route": "app/api/spotify/route.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/api/github/route": "app/api/github/route.js"
 }
