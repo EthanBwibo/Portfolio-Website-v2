@@ -103,6 +103,14 @@ GITHUB_USERNAME=ethanbwibo-Strath
 - SEO meta images (og:image)
 
 ## Testing Status
-- Backend APIs: 100% passing
-- Frontend: 95% passing (1 minor SVG console warning — fixed)
-- Contact form: Verified real email delivery via Resend
+- Backend APIs: 100% passing (iteration 2)
+- Frontend: 100% passing (iteration 2)
+- Spotify: Live — returns real currently playing track
+- GitHub: Live — returns 6 real commits from ethanbwibo-Strath repos
+- Contact form: Verified real email delivery to enbwibo@gmail.com via Resend
+- Hire Me badge: Appears after 10s, dismiss works
+
+## Architecture Note
+All /api/* requests are routed by Kubernetes ingress to FastAPI backend (port 8001).
+Next.js API routes (port 3000) are only used locally.
+FastAPI backend at /app/backend/server.py handles: Spotify, GitHub, Contact.
