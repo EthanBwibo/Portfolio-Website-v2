@@ -125,17 +125,18 @@ export default function SkillsBento() {
             </BentoCard>
           </motion.div>
 
-          {/* Frameworks */}
+          {/* Frameworks — spans 2 cols to fill row */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
+            className="lg:col-span-2"
           >
             <BentoCard>
               <div className="flex items-center gap-2 mb-4">
                 <Layers size={16} className="text-gold" />
-                <span className="text-sm font-syne font-semibold text-white">Frameworks</span>
+                <span className="text-sm font-syne font-semibold text-white">Frameworks & Libraries</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {SKILLS.frameworks.map((s) => <SkillPill key={s} label={s} />)}
