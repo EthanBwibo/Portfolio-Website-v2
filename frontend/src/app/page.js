@@ -10,6 +10,7 @@ import LifeOutside from '@/components/LifeOutside';
 import DataViz from '@/components/DataViz';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import HireMeBadge from '@/components/HireMeBadge';
 
 const CustomCursor = dynamic(() => import('@/components/CustomCursor'), { ssr: false });
 
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <CustomCursor />
+      <HireMeBadge />
       <Navbar />
       <Hero />
       <About />
