@@ -2,3 +2,6 @@
 # Environment files
 *.env
 *.env.*
+memory/PRD.md
+frontend/.env.local
+node_modules/
