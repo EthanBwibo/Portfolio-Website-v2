@@ -193,7 +193,7 @@ async def send_contact_email(form: ContactForm):
         print(f"Notification email error: {e}")
         raise HTTPException(status_code=500, detail="Failed to send email. Please try again.")
 
-    # Auto-reply — best effort, don't fail the request if it errors
+    # Auto-reply to the sender — best effort
     try:
         auto_reply_body = f"""
             <p>Hi {form.name},</p>
@@ -202,14 +202,16 @@ async def send_contact_email(form: ContactForm):
             <div style="background:#fffbea;border-left:4px solid #FFD700;padding:16px;border-radius:0 8px 8px 0;margin:16px 0;">
               {msg_html}
             </div>
-            <p>Best regards,<br><strong>Ethan Bwibo</strong></p>
+            <p>Best regards,<br><strong>Ethan Bwibo</strong><br>
+            <a href="https://www.linkedin.com/in/ethan-bwibo/" style="color:#B8860B;">LinkedIn</a> &middot;
+            <a href="https://github.com/ethanbwibo-Strath" style="color:#B8860B;">GitHub</a></p>
         """
         resend_module.Emails.send(
             {
                 "from": "Ethan Bwibo <onboarding@resend.dev>",
-                "to": ["enbwibo@gmail.com"],
-                "subject": f"Re: {form.subject} [Auto-reply for {form.name}]",
-                "html": build_email_html(f"Auto-reply: {form.name}", auto_reply_body),
+                "to": [form.email],
+                "subject": f"Thanks for reaching out, {form.name}!",
+                "html": build_email_html(f"Hi {form.name}!", auto_reply_body),
             }
         )
     except Exception as e:
