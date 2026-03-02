@@ -57,13 +57,11 @@ export default function About() {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden gold-border gold-glow">
-              <Image
-                src="https://huggingface.co/spaces/BwibzzZ/portfolio-website/resolve/main/images/Me..jpg"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/media/ethan.jpg"
                 alt="Ethan Bwibo"
-                width={560}
-                height={600}
                 className="w-full h-[520px] object-cover object-top"
-                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
