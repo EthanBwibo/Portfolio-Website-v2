@@ -1,25 +1,5 @@
 {
-  "name": "portfolio-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ethanbwibo-Strath/Portfolio-Website.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/ethanbwibo-Strath/Portfolio-Website/issues"
-  },
-  "homepage": "https://github.com/ethanbwibo-Strath/Portfolio-Website#readme",
-  "dependencies": {
-    "@sendgrid/mail": "^8.1.6",
-    "resend": "^6.9.3"
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
