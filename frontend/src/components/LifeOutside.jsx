@@ -119,7 +119,7 @@ function SpotifyWidget() {
         <div className="flex-1 flex flex-col items-center justify-center gap-2 text-center">
           <Music size={28} className="text-gray-600" />
           <p className="text-gray-500 text-sm">Not playing right now</p>
-          <p className="text-gray-600 text-xs">Pop · Hip-hop · Afrobeats</p>
+          <p className="text-gray-600 text-xs">Christian · Melodic Rap · Pop</p>
         </div>
       )}
     </div>
@@ -265,7 +265,7 @@ export default function LifeOutside() {
             </div>
             <div className="mt-4 flex items-center gap-2">
               <Heart size={12} className="text-gold" />
-              <p className="text-gray-500 text-xs">Pop · Hip-hop · Afrobeats</p>
+              <p className="text-gray-500 text-xs">Cycling · Music · Arsenal FC</p>
             </div>
           </motion.div>
 
