@@ -4,44 +4,102 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Music2, Music, GitCommit, Github, MapPin, Heart } from 'lucide-react';
 
-/* ──────────────────────────────
-   Tennis Ball (CSS animation)
-────────────────────────────── */
+// /* ──────────────────────────────
+//    Tennis Ball (CSS animation)
+// ────────────────────────────── */
+// function TennisBall() {
+//   return (
+//     <div className="flex flex-col items-center gap-3">
+//       <motion.div
+//         animate={{ y: [-24, 0, -24] }}
+//         transition={{ duration: 1.1, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
+//         className="relative w-20 h-20 rounded-full"
+//         style={{
+//           background: 'radial-gradient(circle at 35% 32%, #d4eb3b, #8ab800)',
+//           boxShadow: '0 0 30px rgba(196,224,59,0.25), inset 0 -3px 8px rgba(0,0,0,0.25)',
+//         }}
+//       >
+//         <div
+//           className="absolute inset-0 rounded-full"
+//           style={{
+//             border: '2.5px solid transparent',
+//             borderTop: '2.5px solid rgba(255,255,255,0.55)',
+//             borderBottom: '2.5px solid rgba(255,255,255,0.55)',
+//             transform: 'rotate(35deg)',
+//           }}
+//         />
+//         <div
+//           className="absolute inset-0 rounded-full"
+//           style={{
+//             border: '2.5px solid transparent',
+//             borderTop: '2.5px solid rgba(255,255,255,0.55)',
+//             borderBottom: '2.5px solid rgba(255,255,255,0.55)',
+//             transform: 'rotate(-35deg)',
+//           }}
+//         />
+//       </motion.div>
+//       <motion.div
+//         animate={{ scaleX: [0.5, 1, 0.5], opacity: [0.25, 0.45, 0.25] }}
+//         transition={{ duration: 1.1, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
+//         className="w-14 h-2 bg-black/60 rounded-full blur-sm"
+//       />
+//     </div>
+//   );
+// }
+
 function TennisBall() {
   return (
     <div className="flex flex-col items-center gap-3">
+      {/* Ball Container */}
       <motion.div
         animate={{ y: [-24, 0, -24] }}
         transition={{ duration: 1.1, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-        className="relative w-20 h-20 rounded-full"
+        className="relative w-20 h-20 rounded-full overflow-hidden"
         style={{
           background: 'radial-gradient(circle at 35% 32%, #d4eb3b, #8ab800)',
-          boxShadow: '0 0 30px rgba(196,224,59,0.25), inset 0 -3px 8px rgba(0,0,0,0.25)',
+          boxShadow: '0 0 30px rgba(196,224,59,0.25), inset 0 -4px 10px rgba(0,0,0,0.3)',
         }}
       >
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{
-            border: '2.5px solid transparent',
-            borderTop: '2.5px solid rgba(255,255,255,0.55)',
-            borderBottom: '2.5px solid rgba(255,255,255,0.55)',
-            transform: 'rotate(35deg)',
-          }}
-        />
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{
-            border: '2.5px solid transparent',
-            borderTop: '2.5px solid rgba(255,255,255,0.55)',
-            borderBottom: '2.5px solid rgba(255,255,255,0.55)',
-            transform: 'rotate(-35deg)',
-          }}
+        {/* Corrected Seams using Intersecting Quadratic Arcs */}
+        <svg
+          viewBox="0 0 100 100"
+          className="absolute inset-0 w-full h-full opacity-50"
+        >
+          {/* Left arc */}
+          <path
+            d="M 10,0 C 20,40 80,40 80,0"
+            fill="none"
+            stroke="white"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            transform="rotate(-45 50 50)"
+          />
+          {/* Right arc */}
+          <path
+            d="M 10,100 C 20,60 80,60 80,100"
+            fill="none"
+            stroke="white"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            transform="rotate(-45 50 50)"
+          />
+        </svg>
+        
+        {/* Subtle Felt Texture Overlay */}
+        <div 
+          className="absolute inset-0 opacity-25 pointer-events-none" 
+          style={{ 
+            backgroundImage: `url('https://www.transparenttextures.com/patterns/felt.png')`,
+            backgroundSize: '150px'
+          }} 
         />
       </motion.div>
+
+      {/* Shadow */}
       <motion.div
-        animate={{ scaleX: [0.5, 1, 0.5], opacity: [0.25, 0.45, 0.25] }}
+        animate={{ scaleX: [0.5, 1, 0.5], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 1.1, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-        className="w-14 h-2 bg-black/60 rounded-full blur-sm"
+        className="w-14 h-2 bg-black/60 rounded-full blur-md"
       />
     </div>
   );

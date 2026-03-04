@@ -7,14 +7,14 @@ const SKILLS = {
   programming: ['Python', 'JavaScript', 'TypeScript', 'Kotlin', 'PHP', 'Java', 'C/C++', 'SQL', 'HTML/CSS'],
   frameworks: ['React', 'Next.js', 'Node.js', 'Express', 'FastAPI', 'Streamlit', 'Android SDK', 'Firebase'],
   data: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Plotly', 'Jupyter'],
-  tools: ['Git', 'VS Code', 'IntelliJ', 'Figma', 'Postman', 'Linux'],
+  tools: ['Git', 'VS Code', 'IntelliJ', 'Figma'],
 };
 
 const EDUCATION = [
   {
     degree: 'BSc Informatics & Computer Science',
     school: 'Strathmore University',
-    period: '2022 – Present',
+    period: '2023 – Present',
     detail: 'Nairobi, Kenya',
   },
   {
@@ -23,13 +23,19 @@ const EDUCATION = [
     period: '2024',
     detail: 'Strathmore University',
   },
+  {
+    degree: 'High School Diploma',
+    school: 'Nova Pioneer Tatu Boys',
+    period: '2019 – 2022',
+    detail: 'Nairobi, Kenya',
+  },
 ];
 
 const LEADERSHIP = [
   {
     role: 'Treasurer & Team Captain',
     org: 'Strathmore University Tennis Team',
-    period: '2024 – 2025',
+    period: '2024 – 2026',
   },
   {
     role: 'Tech Volunteer',
