@@ -4,49 +4,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Music2, Music, GitCommit, Github, MapPin, Heart } from 'lucide-react';
 
-// /* ──────────────────────────────
-//    Tennis Ball (CSS animation)
-// ────────────────────────────── */
-// function TennisBall() {
-//   return (
-//     <div className="flex flex-col items-center gap-3">
-//       <motion.div
-//         animate={{ y: [-24, 0, -24] }}
-//         transition={{ duration: 1.1, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-//         className="relative w-20 h-20 rounded-full"
-//         style={{
-//           background: 'radial-gradient(circle at 35% 32%, #d4eb3b, #8ab800)',
-//           boxShadow: '0 0 30px rgba(196,224,59,0.25), inset 0 -3px 8px rgba(0,0,0,0.25)',
-//         }}
-//       >
-//         <div
-//           className="absolute inset-0 rounded-full"
-//           style={{
-//             border: '2.5px solid transparent',
-//             borderTop: '2.5px solid rgba(255,255,255,0.55)',
-//             borderBottom: '2.5px solid rgba(255,255,255,0.55)',
-//             transform: 'rotate(35deg)',
-//           }}
-//         />
-//         <div
-//           className="absolute inset-0 rounded-full"
-//           style={{
-//             border: '2.5px solid transparent',
-//             borderTop: '2.5px solid rgba(255,255,255,0.55)',
-//             borderBottom: '2.5px solid rgba(255,255,255,0.55)',
-//             transform: 'rotate(-35deg)',
-//           }}
-//         />
-//       </motion.div>
-//       <motion.div
-//         animate={{ scaleX: [0.5, 1, 0.5], opacity: [0.25, 0.45, 0.25] }}
-//         transition={{ duration: 1.1, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-//         className="w-14 h-2 bg-black/60 rounded-full blur-sm"
-//       />
-//     </div>
-//   );
-// }
-
 function TennisBall() {
   return (
     <div className="flex flex-col items-center gap-3">
@@ -288,6 +245,68 @@ function StravaWidget() {
 
 
 /* ──────────────────────────────
+    New Strava Component
+  _____________________________ */
+
+  import { Zap, Activity, Trophy } from 'lucide-react';
+
+function StravaTicker() {
+  const [activities, setActivities] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      fetch('/api/strava')
+        .then(r => r.json())
+        .then(d => { setActivities(d); setLoading(false); })
+        .catch(() => setLoading(false));
+    }, []);
+
+  return (
+    <div className="glass gold-border rounded-2xl p-5 h-full flex flex-col group hover:border-gold/50 transition-all duration-500">
+      <div className="flex justify-between items-center mb-6">
+        <div className="flex items-center gap-2">
+          <Activity size={18} className="text-[#FC4C02]" />
+          <span className="text-[11px] text-gray-400 uppercase tracking-[0.2em] font-syne font-bold">Field Activity</span>
+        </div>
+        {/* Official Strava Logo for Authenticity */}
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Strava_Logo.svg" 
+          alt="Strava" 
+          className="h-3 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+        />
+      </div>
+
+      <div className="space-y-4 flex-1">
+        {activities.map((a, i) => (
+          <div key={i} className="relative pl-4 border-l border-gold/10 hover:border-gold/40 transition-colors">
+             <div className="flex justify-between items-start">
+                <div>
+                  <p className="text-white text-sm font-medium leading-none mb-1">{a.name}</p>
+                  <div className="flex items-center gap-2 text-[10px] text-gray-500">
+                    <span className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 uppercase">{a.type}</span>
+                    <span>•</span>
+                    <span>{new Date(a.date).toLocaleDateString()}</span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-gold font-syne font-bold text-sm">{a.distance} <span className="text-[10px] opacity-60">KM</span></p>
+                </div>
+             </div>
+          </div>
+        ))}
+      </div>
+      
+      {/* Visual Ticker/Pulse */}
+      <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-2">
+        <div className="w-1.5 h-1.5 rounded-full bg-[#FC4C02] animate-pulse" />
+        <p className="text-[9px] text-gray-600 uppercase font-inter tracking-tighter">Live Athletics Feed</p>
+      </div>
+    </div>
+  );
+}
+
+
+/* ──────────────────────────────
    Main LifeOutside Component
 ────────────────────────────── */
 export default function LifeOutside() {
@@ -379,7 +398,7 @@ export default function LifeOutside() {
             <SpotifyWidget />
           </motion.div>
 
-          {/* GitHub */}
+          {/* Strava */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -387,8 +406,7 @@ export default function LifeOutside() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            {/* <GitHubTicker /> */}
-            <StravaWidget />
+            <StravaTicker />
           </motion.div>
         </div>
       </div>
