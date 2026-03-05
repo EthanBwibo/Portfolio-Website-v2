@@ -173,6 +173,18 @@ function ProjectDrawer({ project, onClose }) {
                   View on GitHub
                 </a>
               )}
+
+              {project.website && (
+                <a
+                  href={project.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 glass gold-border rounded-xl text-gold hover:bg-gold/5 transition-colors text-sm font-medium"
+                >
+                  <ExternalLink size={16} />
+                  View Website
+                </a>
+              )}
             </div>
           </motion.div>
         </>

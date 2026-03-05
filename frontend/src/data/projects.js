@@ -7,10 +7,11 @@ export const PROJECTS = [
     short: 'Intelligent IT support chatbot — "Rafiki" means Friend in Swahili.',
     description:
       'An AI-powered IT support chatbot built with Python, FastAPI, and Streamlit. "Rafiki" (Swahili for "Friend") assists users in resolving common IT issues through natural language conversation, featuring intent classification, FAQ retrieval, and escalation workflows.',
-    tags: ['Python', 'FastAPI', 'Streamlit', 'AI/NLP'],
+    tags: ['Python', 'FastAPI', 'React', 'Tailwind CSS', 'AI/NLP'],
     image: null,
     gradient: 'from-emerald-900/40 to-teal-900/30',
-    github: 'https://github.com/ethanbwibo-Strath',
+    github: 'https://github.com/ethanbwibo-Strath/mohi-chatbot',
+    website: null,
   },
   {
     id: 'mohi-internship',
@@ -24,6 +25,7 @@ export const PROJECTS = [
     image: null,
     gradient: 'from-blue-900/40 to-indigo-900/30',
     github: null,
+    website: null,
   },
   {
     id: 'google-workspace',
@@ -36,21 +38,37 @@ export const PROJECTS = [
     tags: ['Python', 'Google Admin SDK', 'Automation', 'OAuth 2.0'],
     image: null,
     gradient: 'from-yellow-900/40 to-orange-900/30',
-    github: 'https://github.com/ethanbwibo-Strath',
+    github: 'https://github.com/ethanbwibo-Strath/Google-Workspace-Automation-Suite',
+    website: null,
   },
   {
     id: 'hilton-artist',
     title: 'Hilton the Artist',
     year: '2026',
-    category: 'Web Design',
+    category: 'Web Platform',
     short: 'Bespoke artist portfolio with immersive galleries and fluid animations.',
     description:
       'A premium artist portfolio website built for "Hilton the Artist." Features immersive full-screen galleries, smooth scroll-triggered animations, an inquiry form, and a minimalist aesthetic that centers the artwork. Designed for maximum visual impact with zero distractions.',
-    tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Design'],
+    tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Supabase'],
     image: '/media/HiltonTheArtist.png',
     gradient: 'from-pink-900/40 to-rose-900/30',
-    github: 'https://github.com/ethanbwibo-Strath',
-  },{
+    github: 'https://github.com/ethanbwibo-Strath/Hilton-the-Artist',
+    website: 'https://hiltonstudio.vercel.app/',
+  },
+  {
+    id: 'cake-cottage',
+    title: 'Cake Cottage',
+    year: '2026',
+    category: 'Web App',
+    short: 'Custom cake ordering system with real-time inventory.',
+    description:
+      "A custom cake ordering web application for a local bakery. Features real-time inventory management, dynamic pricing based on ingredient availability for a smooth customer experience.",
+    tags: ['React', 'Node.js', 'MongoDB'],
+    image: null,
+    github: 'https://github.com/ethanbwibo-Strath/cake-cottage',
+    website: null,
+  },
+  {
     id: 'agritour',
     title: 'AgriTour',
     year: '2025-2026',
@@ -60,7 +78,8 @@ export const PROJECTS = [
       'A native Android application designed to connect agriculture students with real-world farming experiences. Features real-time field visit scheduling, expert farmer networking, crop identification tools, and educational resources to bridge the gap between theory and practice.',
     tags: ['Kotlin', 'Android SDK', 'Firebase'],
     image: '/media/AgriTour.jpg',
-    github: 'https://github.com/ethanbwibo-Strath',
+    github: 'https://github.com/ethanbwibo-Strath/AgriTour-Android-App',
+    website: null,
   },
   {
     id: 'youthconnect',
@@ -72,8 +91,10 @@ export const PROJECTS = [
       "A full-stack web platform that connects parents with verified coaches and academies for children's extracurricular development. Built with a real-time booking system, coach profiles, and progress tracking dashboards.",
     tags: ['React', 'Node.js', 'MongoDB'],
     image: '/media/YouthConnect.png',
-    github: 'https://github.com/ethanbwibo-Strath',
-  },{
+    github: 'https://github.com/ethanbwibo-Strath/CS-Project-I',
+    website: null,
+  },
+  {
     id: 'sdgs-dashboard',
     title: 'SDGs in Kenya Dashboard',
     year: '2025',
@@ -83,7 +104,8 @@ export const PROJECTS = [
       'A comprehensive data visualization dashboard built with Python, Pandas, and Plotly to track and analyze the UN Sustainable Development Goals progress in Kenya. Features interactive charts, goal-by-goal breakdowns, trend analysis, and exportable reports.',
     tags: ['Python', 'Pandas', 'Plotly', 'Data Viz'],
     image: '/media/sdg-dashboard.png',
-    github: 'https://github.com/ethanbwibo-Strath',
+    github: null,
+    website: null,
   },
   {
     id: 'road-accidents',
@@ -95,7 +117,8 @@ export const PROJECTS = [
       'A data analytics project analyzing road accident patterns in Kenya using Python, Pandas, and Plotly. Provides interactive visualizations of accident causes, hotspot mapping, temporal trends, and evidence-based policy recommendations.',
     tags: ['Python', 'Pandas', 'Plotly', 'Seaborn'],
     image: '/media/road-accidents.png',
-    github: 'https://github.com/ethanbwibo-Strath',
+    github: null,
+    website: null,
   },
   {
     id: 'cheapthrills',
@@ -107,7 +130,8 @@ export const PROJECTS = [
       "A full-featured travel booking platform integrating Safaricom's Daraja API for M-Pesa mobile money payments. Supports flight and hotel booking, user authentication, itinerary management, and real-time payment confirmation.",
     tags: ['PHP', 'MySQL', 'Daraja API', 'M-Pesa'],
     image: '/media/CheapThrills.png',
-    github: 'https://github.com/ethanbwibo-Strath',
+    github: 'https://github.com/ethanbwibo-Strath/Software-Engineering-Project',
+    website: null,
   },
   {
     id: 'hildas-recipes',
@@ -119,6 +143,7 @@ export const PROJECTS = [
       "A community-driven recipe sharing platform with user-generated content, social features (likes, comments, follows), search and filter functionality, and a clean responsive design. Built as a full-stack project with PHP and MySQL.",
     tags: ['HTML', 'CSS', 'PHP', 'MySQL'],
     image: '/media/hildas-recipes.png',
-    github: 'https://github.com/ethanbwibo-Strath',
+    github: 'https://github.com/ethanbwibo-Strath/Hilda-s-Recipes',
+    website: null,
   },
 ];
