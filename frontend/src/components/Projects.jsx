@@ -51,7 +51,7 @@ function ProjectCard({ project, onClick }) {
             <span className="font-syne font-bold text-2xl text-white/20">{project.title.charAt(0)}</span>
           </div>
         )}
-        <div className="absolute top-3 right-3 text-xs glass gold-border px-2 py-1 rounded-full text-gray-400 font-inter">
+        <div className="absolute top-3 right-3 text-xs glass border-8 gold-border px-2 py-1 rounded-full text-gold font-inter">
           {project.year}
         </div>
       </div>

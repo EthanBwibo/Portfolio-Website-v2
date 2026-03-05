@@ -47,7 +47,7 @@ export const PROJECTS = [
     description:
       'A premium artist portfolio website built for "Hilton the Artist." Features immersive full-screen galleries, smooth scroll-triggered animations, an inquiry form, and a minimalist aesthetic that centers the artwork. Designed for maximum visual impact with zero distractions.',
     tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Design'],
-    image: null,
+    image: '/media/HiltonTheArtist.png',
     gradient: 'from-pink-900/40 to-rose-900/30',
     github: 'https://github.com/ethanbwibo-Strath',
   },{
