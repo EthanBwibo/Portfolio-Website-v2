@@ -52,7 +52,7 @@ function TennisBall() {
     <div className="flex flex-col items-center gap-3">
       {/* Ball Container */}
       <motion.div
-        animate={{ y: [-24, 0, -24] }}
+        animate={{ y: [-30, 40, -30] }}
         transition={{ duration: 1.1, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
         className="relative w-20 h-20 rounded-full overflow-hidden"
         style={{
@@ -246,6 +246,48 @@ function GitHubTicker() {
 }
 
 /* ──────────────────────────────
+    Strava API Route
+────────────────────────────── */
+function StravaWidget() {
+  const [activities, setActivities] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/strava')
+      .then(r => r.json())
+      .then(d => { setActivities(d); setLoading(false); })
+      .catch(() => setLoading(false));
+  }, []);
+
+  return (
+    <div className="glass gold-border rounded-2xl p-5 h-full flex flex-col">
+      <div className="flex items-center gap-2 mb-4">
+        <div className="w-2 h-2 rounded-full bg-[#FC4C02]" /> {/* Strava Orange */}
+        <span className="text-[10px] text-gray-400 uppercase tracking-widest font-inter">Recent Activity</span>
+      </div>
+      {loading ? (
+        <div className="flex-1 flex items-center justify-center"><div className="animate-spin ..." /></div>
+      ) : activities.length > 0 ? (
+        <div className="space-y-4">
+          {activities.map((a, i) => (
+            <div key={i} className="flex justify-between items-center">
+              <div>
+                <p className="text-white text-sm font-medium">{a.name}</p>
+                <p className="text-gray-500 text-xs">{a.type} · {new Date(a.date).toLocaleDateString()}</p>
+              </div>
+              <p className="text-gold font-bold text-sm">{a.distance}km</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="text-gray-500 text-sm">Rest day today! 🎾</p>
+      )}
+    </div>
+  );
+}
+
+
+/* ──────────────────────────────
    Main LifeOutside Component
 ────────────────────────────── */
 export default function LifeOutside() {
@@ -345,7 +387,8 @@ export default function LifeOutside() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <GitHubTicker />
+            {/* <GitHubTicker /> */}
+            <StravaWidget />
           </motion.div>
         </div>
       </div>
