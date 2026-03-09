@@ -131,7 +131,7 @@ export const PROJECTS = [
     tags: ['PHP', 'MySQL', 'Daraja API', 'M-Pesa'],
     image: '/media/CheapThrills.png',
     github: 'https://github.com/ethanbwibo-Strath/Software-Engineering-Project',
-    website: null,
+    website: 'https://cheapthrillsse.vercel.app/',
   },
   {
     id: 'hildas-recipes',
@@ -143,7 +143,7 @@ export const PROJECTS = [
       "A community-driven recipe sharing platform with user-generated content, social features (likes, comments, follows), search and filter functionality, and a clean responsive design. Built as a full-stack project with PHP and MySQL.",
     tags: ['HTML', 'CSS', 'PHP', 'MySQL'],
     image: '/media/hildas-recipes.png',
-    github: 'https://github.com/ethanbwibo-Strath/Hilda-s-Recipes',
+    github: 'https://github.com/ethanbwibo-Strath/Hilda-s-Recipes-Project',
     website: null,
   },
 ];
