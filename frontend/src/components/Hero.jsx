@@ -107,7 +107,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass gold-border text-xs text-gray-300 mb-10 font-inter"
         >
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Available for Internship · Jan–Mar 2026
+          Available for Work, Internships and Projects
         </motion.div>
 
         {/* Name */}

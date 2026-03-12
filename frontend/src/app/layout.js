@@ -1,4 +1,6 @@
 import { Syne, Inter } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import './globals.css';
 
 const syne = Syne({
@@ -18,8 +20,8 @@ const inter = Inter({
 export const metadata = {
   title: 'Ethan Bwibo | Software Developer & Data Analyst',
   description:
-    'Personal portfolio of Ethan Bwibo — Software Developer, Data Analyst, and Strathmore Tennis Captain. 3rd-year ICS student at Strathmore University, Nairobi.',
-  keywords: ['Software Developer', 'Data Analyst', 'Nairobi', 'Strathmore University'],
+    'Personal portfolio of Ethan Bwibo - Software Developer, Data Analyst, and Strathmore Tennis Captain. 3rd-year ICS student at Strathmore University, Nairobi.',
+  keywords: ['Ethan Bwibo','Software Developer', 'Data Analyst', 'Nairobi', 'Strathmore University'],
   images: ['frontend/public/media/favicon.ico'],
 };
 
