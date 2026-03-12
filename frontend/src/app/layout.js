@@ -58,6 +58,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${syne.variable} ${inter.variable}`}>
       <body className="bg-background text-white font-inter antialiased overflow-x-hidden">
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
