@@ -58,7 +58,7 @@ export default function About() {
             <div className="relative rounded-2xl overflow-hidden gold-border gold-glow">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/media/ethan.jpg"
+                src="/media/Bwibo.jpeg"
                 alt="Ethan Bwibo"
                 className="w-full h-[520px] object-cover object-top"
               />

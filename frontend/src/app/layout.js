@@ -20,6 +20,7 @@ export const metadata = {
   description:
     'Personal portfolio of Ethan Bwibo — Software Developer, Data Analyst, and Strathmore Tennis Captain. 3rd-year ICS student at Strathmore University, Nairobi.',
   keywords: ['Software Developer', 'Data Analyst', 'Nairobi', 'Strathmore University'],
+  images: ['frontend/public/media/favicon.ico'],
 };
 
 export default function RootLayout({ children }) {
