@@ -8,7 +8,7 @@ export const PROJECTS = [
     description:
       'An AI-powered IT support chatbot built with Python, FastAPI, and Streamlit. "Rafiki" (Swahili for "Friend") assists users in resolving common IT issues through natural language conversation, featuring intent classification, FAQ retrieval, and escalation workflows.',
     tags: ['Python', 'FastAPI', 'React', 'Tailwind CSS', 'AI/NLP'],
-    image: null,
+    image: '/media/rafiki IT.jpg',
     gradient: 'from-emerald-900/40 to-teal-900/30',
     github: 'https://github.com/ethanbwibo-Strath/mohi-chatbot',
     website: null,
@@ -64,7 +64,7 @@ export const PROJECTS = [
     description:
       "A custom cake ordering web application for a local bakery. Features real-time inventory management, dynamic pricing based on ingredient availability for a smooth customer experience.",
     tags: ['React', 'Node.js', 'MongoDB'],
-    image: null,
+    image: '/media/CakeCottage.jpg',
     github: 'https://github.com/ethanbwibo-Strath/cake-cottage',
     website: null,
   },
