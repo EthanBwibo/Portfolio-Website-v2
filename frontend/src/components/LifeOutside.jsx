@@ -207,12 +207,16 @@ export default function LifeOutside() {
             <div>
               <p className="text-xs text-gold/70 font-inter mb-2 uppercase tracking-widest">Sports & Movement</p>
               <h3 className="font-syne font-bold text-white text-2xl mb-3">More Than a Side Quest</h3>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                Sport is where I decompress, compete, and stay sharp. 
-                I've spent years on the tennis court — most recently leading the Strathmore University Tennis Team as Treasurer & Captain — and I bring that same discipline and team-first mentality to everything I build.
-                
+              <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+                Sport is where I decompress, compete, and stay sharp. I've spent years on the tennis court — most recently leading the Strathmore University Tennis Team as Treasurer & Captain — and I bring that same discipline and team-first mentality to everything I build.
+              </p>
+
+              <div className="flex gap-3 mt-4">
+              <p className="text-gray-400 text-sm leading-relaxed max-w-md mt-3">
                 Off the court, you'll find me cycling through Nairobi, keeping tabs on Arsenal, or debating why the beautiful game is the greatest sport ever invented.
               </p>
+              </div>
+
               <div className="flex gap-3 mt-4">
                 {['Tennis', 'Cycling', 'Football'].map((tag) => (
                   <span key={tag} className="text-[10px] px-2.5 py-1 rounded-full border border-gold/20 text-gold/70">{tag}</span>
