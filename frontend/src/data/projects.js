@@ -14,20 +14,6 @@ export const PROJECTS = [
     website: null,
   },
   {
-    id: 'mohi-internship',
-    title: 'IT Internship @ MOHI',
-    year: '2026',
-    category: 'Professional Experience',
-    short: 'IT Intern at Missions of Hope International — infrastructure & support.',
-    description:
-      "Served as IT Intern at Missions of Hope International (MOHI), a leading Nairobi-based NGO. Responsibilities included end-user technical support, network administration, hardware maintenance, and implementing IT policies across multiple campuses.",
-    tags: ['IT Support', 'Networking', 'System Admin', 'Helpdesk'],
-    image: null,
-    gradient: 'from-blue-900/40 to-indigo-900/30',
-    github: null,
-    website: null,
-  },
-  {
     id: 'google-workspace',
     title: 'Google Workspace Automation',
     year: '2026',

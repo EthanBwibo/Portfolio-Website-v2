@@ -6,7 +6,7 @@ export const EXPERIENCES = [
     type: 'Internship',
     period: 'Jan – Mar 2026',
     location: 'Nairobi, Kenya',
-    website: 'https://www.mohi.org',
+    website: 'https://give.mohiafrica.org/',
     gradient: 'from-blue-900/40 to-indigo-900/30',
     short: 'Full-spectrum IT support, infrastructure, and AI chatbot development at a leading Nairobi non-profit.',
     description:
