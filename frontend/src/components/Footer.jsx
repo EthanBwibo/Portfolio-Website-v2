@@ -59,13 +59,13 @@ export default function Footer() {
                 in/ethan-bwibo
               </a>
               <a
-                href="https://github.com/ethanbwibo-Strath"
+                href="https://github.com/EthanBwibo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-400 text-sm hover:text-gold transition-colors"
               >
                 <Github size={13} />
-                ethanbwibo-Strath
+                EthanBwibo
               </a>
             </div>
           </div>

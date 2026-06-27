@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const username = process.env.GITHUB_USERNAME || 'ethanbwibo-Strath';
+    const username = process.env.GITHUB_USERNAME || 'EthanBwibo';
 
     const response = await fetch(
       `https://api.github.com/users/${username}/events/public?per_page=15`,
@@ -38,6 +38,6 @@ export async function GET() {
     return NextResponse.json({ commits, username });
   } catch (error) {
     console.error('GitHub API error:', error.message);
-    return NextResponse.json({ commits: [], username: 'ethanbwibo-Strath' });
+    return NextResponse.json({ commits: [], username: 'EthanBwibo' });
   }
 }

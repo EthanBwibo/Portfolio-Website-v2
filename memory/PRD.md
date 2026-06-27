@@ -51,7 +51,7 @@ RESEND_API_KEY=re_SvbAgv1N_AhtrRe8HQm6eVxModnZSQRFp
 SPOTIFY_CLIENT_ID=1dbd61d8c1154f1bb6846a1ded9ae972
 SPOTIFY_CLIENT_SECRET=a38a33a64eb0441caae0b81da8b793a2
 SPOTIFY_REFRESH_TOKEN=AQAVqm5ZbSVM9-...
-GITHUB_USERNAME=ethanbwibo-Strath
+GITHUB_USERNAME=EthanBwibo
 ```
 
 ## Features Implemented ✅ (Feb 2026)
@@ -106,7 +106,7 @@ GITHUB_USERNAME=ethanbwibo-Strath
 - Backend APIs: 100% passing (iteration 2)
 - Frontend: 100% passing (iteration 2)
 - Spotify: Live — returns real currently playing track
-- GitHub: Live — returns 6 real commits from ethanbwibo-Strath repos
+- GitHub: Live — returns 6 real commits from EthanBwibo repos
 - Contact form: Verified real email delivery to enbwibo@gmail.com via Resend
 - Hire Me badge: Appears after 10s, dismiss works
 

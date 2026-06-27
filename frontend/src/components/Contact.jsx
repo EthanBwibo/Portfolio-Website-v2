@@ -120,7 +120,7 @@ export default function Contact() {
                   LinkedIn
                 </a>
                 <a
-                  href="https://github.com/ethanbwibo-Strath"
+                  href="https://github.com/EthanBwibo"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="github-link"

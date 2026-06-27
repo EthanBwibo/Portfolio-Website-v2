@@ -93,7 +93,7 @@ KNOWN_REPOS = [
 
 @app.get("/api/github")
 async def get_github_commits():
-    username = os.environ.get("GITHUB_USERNAME", "ethanbwibo-Strath")
+    username = os.environ.get("GITHUB_USERNAME", "EthanBwibo")
     commits = []
 
     try:
@@ -154,7 +154,7 @@ def build_email_html(heading: str, body_html: str) -> str:
         </div>
         <div style="background:#f9fafb;padding:16px;text-align:center;font-size:13px;color:#888;border-top:1px solid #eee;">
           <a href="https://www.linkedin.com/in/ethan-bwibo/" style="color:#B8860B;text-decoration:none;margin:0 8px;">LinkedIn</a> ·
-          <a href="https://github.com/ethanbwibo-Strath" style="color:#B8860B;text-decoration:none;margin:0 8px;">GitHub</a>
+          <a href="https://github.com/EthanBwibo" style="color:#B8860B;text-decoration:none;margin:0 8px;">GitHub</a>
         </div>
       </div>
     </div>
@@ -204,7 +204,7 @@ async def send_contact_email(form: ContactForm):
             </div>
             <p>Best regards,<br><strong>Ethan Bwibo</strong><br>
             <a href="https://www.linkedin.com/in/ethan-bwibo/" style="color:#B8860B;">LinkedIn</a> &middot;
-            <a href="https://github.com/ethanbwibo-Strath" style="color:#B8860B;">GitHub</a></p>
+            <a href="https://github.com/EthanBwibo" style="color:#B8860B;">GitHub</a></p>
         """
         resend_module.Emails.send(
             {

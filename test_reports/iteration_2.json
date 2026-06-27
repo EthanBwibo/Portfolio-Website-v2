@@ -19,7 +19,7 @@
   "seed_data_creation": "None",
   "retest_needed": false,
   "should_main_agent_self_test": false,
-  "context_for_next_testing_agent": "All features working. Spotify: live track (Focus/Evan Ford). GitHub: 6 commits from ethanbwibo-Strath repos. Contact: success state shown, email sent to enbwibo@gmail.com. Hire Me badge: appears after 10s, dismiss button works. Life & Live section shows real data. Known minor: SVG circle console error in DataViz.",
+  "context_for_next_testing_agent": "All features working. Spotify: live track (Focus/Evan Ford). GitHub: 6 commits from EthanBwibo repos. Contact: success state shown, email sent to enbwibo@gmail.com. Hire Me badge: appears after 10s, dismiss button works. Life & Live section shows real data. Known minor: SVG circle console error in DataViz.",
   "test_results": {
     "GET /api/spotify": "PASS - returns isPlaying:true, title:Focus, artist:Evan Ford",
     "GET /api/github": "PASS - returns 6 commits from mohi-chatbot, Hilton-the-Artist, Google-Workspace-Automation-Suite",

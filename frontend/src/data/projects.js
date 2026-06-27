@@ -10,7 +10,7 @@ export const PROJECTS = [
     tags: ['Python', 'FastAPI', 'Next.js', 'Tailwind CSS', 'AI/NLP'],
     image: '/media/rafiki IT.jpg',
     gradient: 'from-emerald-900/40 to-teal-900/30',
-    github: 'https://github.com/ethanbwibo-Strath/mohi-chatbot',
+    github: 'https://github.com/EthanBwibo/mohi-chatbot',
     website: null,
   },
   {
@@ -38,7 +38,7 @@ export const PROJECTS = [
     tags: ['Python', 'Google Admin SDK', 'Automation', 'OAuth 2.0'],
     image: null,
     gradient: 'from-yellow-900/40 to-orange-900/30',
-    github: 'https://github.com/ethanbwibo-Strath/Google-Workspace-Automation-Suite',
+    github: 'https://github.com/EthanBwibo/Google-Workspace-Automation-Suite',
     website: null,
   },
   {
@@ -52,7 +52,7 @@ export const PROJECTS = [
     tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Supabase'],
     image: '/media/HiltonTheArtist.png',
     gradient: 'from-pink-900/40 to-rose-900/30',
-    github: 'https://github.com/ethanbwibo-Strath/Hilton-the-Artist',
+    github: 'https://github.com/EthanBwibo/Hilton-the-Artist',
     website: 'https://hiltonstudio.vercel.app/',
   },
   {
@@ -65,7 +65,7 @@ export const PROJECTS = [
       "A custom cake ordering web application for a local bakery. Features real-time inventory management, dynamic pricing based on ingredient availability for a smooth customer experience.",
     tags: ['React', 'Node.js', 'MongoDB'],
     image: '/media/CakeCottage.jpg',
-    github: 'https://github.com/ethanbwibo-Strath/cake-cottage',
+    github: 'https://github.com/EthanBwibo/cake-cottage',
     website: null,
   },
   {
@@ -78,7 +78,7 @@ export const PROJECTS = [
       'A native Android application designed to connect agriculture students with real-world farming experiences. Features real-time field visit scheduling, expert farmer networking, crop identification tools, and educational resources to bridge the gap between theory and practice.',
     tags: ['Kotlin', 'Android SDK', 'Firebase'],
     image: '/media/AgriTour.jpg',
-    github: 'https://github.com/ethanbwibo-Strath/AgriTour-Android-App',
+    github: 'https://github.com/EthanBwibo/AgriTour-Android-App',
     website: null,
   },
   {
@@ -91,7 +91,7 @@ export const PROJECTS = [
       "A full-stack web platform that connects parents with verified coaches and academies for children's extracurricular development. Built with a real-time booking system, coach profiles, and progress tracking dashboards.",
     tags: ['React', 'Node.js', 'MongoDB'],
     image: '/media/YouthConnect.png',
-    github: 'https://github.com/ethanbwibo-Strath/CS-Project-I',
+    github: 'https://github.com/EthanBwibo/CS-Project-I',
     website: null,
   },
   {
@@ -130,7 +130,7 @@ export const PROJECTS = [
       "A full-featured travel booking platform integrating Safaricom's Daraja API for M-Pesa mobile money payments. Supports flight and hotel booking, user authentication, itinerary management, and real-time payment confirmation.",
     tags: ['PHP', 'MySQL', 'Daraja API', 'M-Pesa'],
     image: '/media/CheapThrills.png',
-    github: 'https://github.com/ethanbwibo-Strath/Software-Engineering-Project',
+    github: 'https://github.com/EthanBwibo/Software-Engineering-Project',
     website: 'https://cheapthrillsse.vercel.app/',
   },
   {
@@ -143,7 +143,7 @@ export const PROJECTS = [
       "A community-driven recipe sharing platform with user-generated content, social features (likes, comments, follows), search and filter functionality, and a clean responsive design. Built as a full-stack project with PHP and MySQL.",
     tags: ['HTML', 'CSS', 'PHP', 'MySQL'],
     image: '/media/hildas-recipes.png',
-    github: 'https://github.com/ethanbwibo-Strath/Hilda-s-Recipes-Project',
+    github: 'https://github.com/EthanBwibo/Hilda-s-Recipes-Project',
     website: null,
   },
 ];

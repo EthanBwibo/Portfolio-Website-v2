@@ -1,9 +1,9 @@
 {
-  "summary": "Full portfolio testing completed. All major features working: Hero, Navbar, Projects (10 cards + drawer), Contact form (sends real email via Resend), DataViz proficiency bars, Life & Live section with tennis ball + Spotify/GitHub widgets, Skills bento grid, Footer. APIs: /api/spotify returns {isPlaying:false}, /api/github returns {commits:[], username:'ethanbwibo-Strath'}, /api/contact returns {success:true}.",
+  "summary": "Full portfolio testing completed. All major features working: Hero, Navbar, Projects (10 cards + drawer), Contact form (sends real email via Resend), DataViz proficiency bars, Life & Live section with tennis ball + Spotify/GitHub widgets, Skills bento grid, Footer. APIs: /api/spotify returns {isPlaying:false}, /api/github returns {commits:[], username:'EthanBwibo'}, /api/contact returns {success:true}.",
   "backend_issues": {
     "critical": [],
     "minor": [
-      {"endpoint": "/api/github", "issue": "Returns empty commits array - GitHub username 'ethanbwibo-Strath' may have no public recent pushes. Functional but shows 'No recent activity'."}
+      {"endpoint": "/api/github", "issue": "Returns empty commits array - GitHub username 'EthanBwibo' may have no public recent pushes. Functional but shows 'No recent activity'."}
     ]
   },
   "frontend_issues": {
@@ -30,7 +30,7 @@
   "critical_code_review_comments": [
     "DataViz.jsx: motion.circle with animate={{ r: [...] }} causes SVG attribute 'r: undefined' console errors. Fix by animating a different property (opacity/scale) or using keyframes on the fill instead of the r attribute.",
     "Life & Live section has only 2 bento items visible (tennis + location) - Spotify and GitHub widgets appear off-screen below, requiring user to scroll significantly. Consider layout improvement.",
-    "GitHub username 'ethanbwibo-Strath' returns no commits - may not be the user's actual GitHub handle for public repos."
+    "GitHub username 'EthanBwibo' returns no commits - may not be the user's actual GitHub handle for public repos."
   ],
   "updated_files": [],
   "success_rate": {"backend": "100%", "frontend": "95%"},

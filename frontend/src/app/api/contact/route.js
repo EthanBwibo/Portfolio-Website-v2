@@ -27,7 +27,7 @@ function buildHtml({ heading, body, subtext }) {
         </div>
         <div style="${styles.footer}">
           <a href="https://www.linkedin.com/in/ethan-bwibo/" style="color:#B8860B;text-decoration:none;margin:0 8px;">LinkedIn</a> ·
-          <a href="https://github.com/ethanbwibo-Strath" style="color:#B8860B;text-decoration:none;margin:0 8px;">GitHub</a>
+          <a href="https://github.com/EthanBwibo" style="color:#B8860B;text-decoration:none;margin:0 8px;">GitHub</a>
         </div>
       </div>
     </div>
