@@ -18,6 +18,12 @@ const EDUCATION = [
     detail: 'Nairobi, Kenya',
   },
   {
+    degree: 'AI Essentials for Professionals',
+    school: 'Moringa School',
+    period: '2026',
+    detail: 'Online, Kenya',
+  },
+  {
     degree: 'Certificate in Data Analytics & Visualization',
     school: 'iLab Africa',
     period: '2024',
@@ -33,7 +39,12 @@ const EDUCATION = [
 
 const LEADERSHIP = [
   {
-    role: 'Treasurer & Team Captain',
+    role: 'Treasurer All Saints Volunteers',
+    org: 'All Saints Cathedral Nairobi',
+    period: '2025 – Present',
+  },
+  {
+    role: 'Former Treasurer & Team Captain',
     org: 'Strathmore University Tennis Team',
     period: '2024 – 2026',
   },

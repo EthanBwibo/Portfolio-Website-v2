@@ -71,7 +71,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-gray-400 mb-12 max-w-xl"
         >
-          Actively seeking internship opportunities for January–March 2026. Have a project or opportunity in mind? Let's talk.
+          Have a project or opportunity in mind? Let's talk.
         </motion.p>
 
         <div className="grid lg:grid-cols-5 gap-8 items-start">

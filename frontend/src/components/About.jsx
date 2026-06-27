@@ -6,16 +6,17 @@ import { MapPin, BookOpen, Calendar, Mail, Phone } from 'lucide-react';
 const STATS = [
   { value: '10+', label: 'Projects Built' },
   { value: '6+', label: 'Languages' },
-  { value: '3rd', label: 'Year ICS' },
+  { value: '4th', label: 'Year ICS' },
   { value: '2024', label: 'Data Analytics Cert' },
 ];
 
 const INFO = [
   { icon: MapPin, text: 'Nairobi, Kenya' },
   { icon: BookOpen, text: 'Strathmore University' },
-  { icon: Calendar, text: 'Internship: Jan–Mar 2026' },
+  { icon: Calendar, text: 'Internship, Projects, Work' },
   { icon: Mail, text: 'enbwibo@gmail.com' },
   { icon: Phone, text: '+254 714 516 129' },
+  { icon: Worker, text: 'https://github.com/EthanBwibo'}
 ];
 
 const fadeUp = {
@@ -88,7 +89,7 @@ export default function About() {
               className="space-y-4 text-gray-300 leading-relaxed"
             >
               <p className="text-lg">
-                I'm a passionate 3rd-year Informatics & Computer Science student at{' '}
+                I'm a passionate final year Informatics & Computer Science student at{' '}
                 <span className="text-gold font-medium">Strathmore University</span>, Nairobi.
                 My work spans software development, data analytics, and user-centered design.
               </p>
@@ -98,8 +99,10 @@ export default function About() {
                 ranging from Android apps to Python dashboards, always focusing on real-world impact.
               </p>
               <p>
-                Beyond tech, I serve as <span className="text-gold font-medium">Treasurer & Team Captain</span>{' '}
-                for the Strathmore University Tennis Team, and actively participate in praise & worship.
+                Beyond tech, I serve as <span className="text-gold font-medium">Treasurer</span>{' '}
+                for the All Saints Volunteers for All Saints Cathedral Nairobi,
+                 and actively participate in praise & worship, tennis and cycling. 
+                 I thrive on challenges, continuous learning, and contributing to meaningful projects.
               </p>
             </motion.div>
 
@@ -149,7 +152,7 @@ export default function About() {
               <p className="text-xs section-label mb-4">Languages</p>
               {[
                 { lang: 'English', level: 'Fluent', pct: 98 },
-                { lang: 'Swahili', level: 'Proficient', pct: 93 },
+                { lang: 'Swahili', level: 'Native', pct: 95 },
                 { lang: 'French', level: 'Basic', pct: 38 },
               ].map(({ lang, level, pct }) => (
                 <div key={lang} className="mb-3 last:mb-0">

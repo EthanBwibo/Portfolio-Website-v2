@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <p className="text-gray-600 text-xs">© 2025 Ethan Bwibo. All rights reserved.</p>
+          <p className="text-gray-600 text-xs">© {new Date().getFullYear()} Ethan Bwibo. All rights reserved.</p>
           <p className="text-gray-700 text-xs">Built with Next.js · Tailwind · Framer Motion</p>
         </div>
       </div>

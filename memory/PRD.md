@@ -77,7 +77,7 @@ GITHUB_USERNAME=EthanBwibo
 4. Hilton the Artist (artist portfolio)
 
 ## User Persona
-- Ethan Bwibo, 3rd-year ICS @ Strathmore University, Nairobi
+- Ethan Bwibo, final year ICS @ Strathmore University, Nairobi
 - Seeking Jan–Mar 2026 internship
 - Tennis Team Captain + Treasurer
 - Interests: Pop, Hip-hop, Afrobeats

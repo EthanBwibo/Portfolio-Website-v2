@@ -139,7 +139,7 @@ export default function Hero() {
           className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto mb-12 leading-relaxed font-inter"
         >
           Building impactful tech solutions through code, design, and data.
-          3rd-year ICS student at Strathmore University, Nairobi.
+          Final year ICS student at Strathmore University, Nairobi.
         </motion.p>
 
         {/* CTA Buttons */}

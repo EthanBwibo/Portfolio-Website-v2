@@ -20,7 +20,7 @@ const inter = Inter({
 export const metadata = {
   title: 'Ethan Bwibo | Software Developer & Data Analyst',
   description:
-    'Personal portfolio of Ethan Bwibo - Software Developer, Data Analyst, and Strathmore Tennis Captain. 3rd-year ICS student at Strathmore University, Nairobi.',
+    'Personal portfolio of Ethan Bwibo - Software Developer, Data Analyst, and Strathmore Tennis Captain. final year ICS student at Strathmore University, Nairobi.',
   keywords: ['Ethan Bwibo','Software Developer', 'Data Analyst', 'Nairobi', 'Strathmore University'],
   images: ['frontend/public/media/favicon-32x32.png'],
   icons: {
