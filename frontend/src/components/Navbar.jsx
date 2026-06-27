@@ -55,7 +55,7 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href="/media/Ethan-Bwibo-R%C3%A9sum%C3%A9.pdf"
+              href="media/Ethan_Bwibo_Resume_2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="resume-btn"
@@ -95,7 +95,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/media/Ethan-Bwibo-R%C3%A9sum%C3%A9.pdf"
+                href="media/Ethan_Bwibo_Resume_2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block mt-2 px-4 py-2.5 text-center text-sm font-bold gold-gradient text-black rounded-lg"
