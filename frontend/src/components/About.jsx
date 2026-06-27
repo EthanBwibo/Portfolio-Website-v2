@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, BookOpen, Calendar, Mail, Phone } from 'lucide-react';
+import { MapPin, BookOpen, Calendar, Mail, Phone, Construction } from 'lucide-react';
 
 const STATS = [
   { value: '10+', label: 'Projects Built' },
@@ -16,7 +16,7 @@ const INFO = [
   { icon: Calendar, text: 'Internship, Projects, Work' },
   { icon: Mail, text: 'enbwibo@gmail.com' },
   { icon: Phone, text: '+254 714 516 129' },
-  { icon: Worker, text: 'https://github.com/EthanBwibo'}
+  { icon: Construction, text: 'https://github.com/EthanBwibo'}
 ];
 
 const fadeUp = {
