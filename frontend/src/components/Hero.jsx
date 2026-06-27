@@ -157,7 +157,7 @@ export default function Hero() {
             View My Work
           </MagneticButton>
           <MagneticButton
-            href="media/Ethan_Bwibo_CV_2026.pdf"
+            href="/media/Ethan_Bwibo_CV_2026.pdf"
             className="flex items-center gap-2 px-8 py-4 glass gold-border text-gold font-syne font-semibold text-sm rounded-xl hover:bg-gold/5 transition-colors"
             testId="download-cv-btn"
           >
