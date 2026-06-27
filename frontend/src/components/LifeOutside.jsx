@@ -205,13 +205,16 @@ export default function LifeOutside() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="lg:col-span-2 glass gold-border rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-8">
             <TennisBall />
             <div>
-              <p className="text-xs text-gold/70 font-inter mb-2 uppercase tracking-widest">Captaincy</p>
-              <h3 className="font-syne font-bold text-white text-2xl mb-3">Strathmore Tennis Captain</h3>
+              <p className="text-xs text-gold/70 font-inter mb-2 uppercase tracking-widest">Sports & Movement</p>
+              <h3 className="font-syne font-bold text-white text-2xl mb-3">More Than a Side Quest</h3>
               <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                As Treasurer & Team Captain, I lead by example both on and off the court — balancing competitive sport, team management, and a high-performance academic journey.
+                Sport is where I decompress, compete, and stay sharp. 
+                I've spent years on the tennis court — most recently leading the Strathmore University Tennis Team as Treasurer & Captain — and I bring that same discipline and team-first mentality to everything I build.
+                
+                Off the court, you'll find me cycling through Nairobi, keeping tabs on Arsenal, or debating why the beautiful game is the greatest sport ever invented.
               </p>
               <div className="flex gap-3 mt-4">
-                {['Leadership', 'Strategy', 'Resilience'].map((tag) => (
+                {['Tennis', 'Cycling', 'Football'].map((tag) => (
                   <span key={tag} className="text-[10px] px-2.5 py-1 rounded-full border border-gold/20 text-gold/70">{tag}</span>
                 ))}
               </div>

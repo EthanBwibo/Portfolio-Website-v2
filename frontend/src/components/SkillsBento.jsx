@@ -44,7 +44,7 @@ const LEADERSHIP = [
     period: '2025 – Present',
   },
   {
-    role: 'Former Treasurer & Team Captain',
+    role: 'Treasurer & Team Captain',
     org: 'Strathmore University Tennis Team',
     period: '2024 – 2026',
   },
