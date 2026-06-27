@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
 import { Download, ArrowDown } from 'lucide-react';
 
-const ROLES = ['Software Developer', 'Data Analyst', 'Strathmore Tennis Captain'];
+const ROLES = ['Software Developer', 'Data Analyst', 'Prompt Engineer', 'Tech Enthusiast', 'Problem Solver', 'Lifelong Learner'];
 
 function MagneticButton({ children, className, href, onClick, testId }) {
   const ref = useRef(null);
