@@ -194,7 +194,7 @@ export default function LifeOutside() {
     <section id="life" className="py-28 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="section-label mb-3">
-          04 — Life & Live
+          05 — Life & Live
         </motion.p>
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="font-syne font-extrabold text-4xl sm:text-5xl text-white mb-12">
           Beyond the <span className="text-gold-gradient">Screen</span>

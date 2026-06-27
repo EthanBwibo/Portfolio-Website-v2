@@ -4,10 +4,12 @@ import { Linkedin, Github, Mail } from 'lucide-react';
 
 const LINKS = [
   { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#life', label: 'Life & Live' },
   { href: '#contact', label: 'Contact' },
+
 ];
 
 export default function Footer() {

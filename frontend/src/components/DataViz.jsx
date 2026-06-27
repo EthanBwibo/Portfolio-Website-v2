@@ -96,7 +96,7 @@ export default function DataViz() {
           viewport={{ once: true }}
           className="section-label mb-3"
         >
-          05 — Analytics Expertise
+          06 — Analytics Expertise
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

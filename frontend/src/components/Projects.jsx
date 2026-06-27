@@ -205,7 +205,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="section-label mb-3"
         >
-          02 — Projects
+          03 — Projects
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

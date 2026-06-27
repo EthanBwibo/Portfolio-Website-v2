@@ -89,7 +89,7 @@ export default function SkillsBento() {
           viewport={{ once: true }}
           className="section-label mb-3"
         >
-          03 — Skills & Background
+          04 — Skills & Background
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
