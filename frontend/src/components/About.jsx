@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { MapPin, BookOpen, Calendar, Mail, Phone, Construction } from 'lucide-react';
 
 const STATS = [
-  { value: '10+', label: 'Projects Built' },
+  { value: '12+', label: 'Projects Built' },
   { value: '6+', label: 'Languages' },
   { value: '4th', label: 'Year ICS' },
   { value: '2024', label: 'Data Analytics Cert' },
@@ -73,7 +73,7 @@ export default function About() {
               transition={{ delay: 0.4 }}
               className="absolute -bottom-6 -right-4 glass gold-border rounded-xl p-4 text-center"
             >
-              <p className="font-syne font-bold text-gold text-2xl">3+</p>
+              <p className="font-syne font-bold text-gold text-2xl">4+</p>
               <p className="text-gray-400 text-xs mt-0.5">Years Coding</p>
             </motion.div>
           </motion.div>
@@ -91,11 +91,11 @@ export default function About() {
               <p className="text-lg">
                 I'm a passionate final year Informatics & Computer Science student at{' '}
                 <span className="text-gold font-medium">Strathmore University</span>, Nairobi.
-                My work spans software development, data analytics, and user-centered design.
+                My work spans software development, AI systems, data analytics, and user-centered design.
               </p>
               <p>
                 Recently completed a Certificate in Data Analytics & Visualization from{' '}
-                <span className="text-white font-medium">iLab Africa</span>. I've built 10+ projects
+                <span className="text-white font-medium">iLab Africa</span>. I've built 12+ projects
                 ranging from Android apps to Python dashboards, always focusing on real-world impact.
               </p>
               <p>

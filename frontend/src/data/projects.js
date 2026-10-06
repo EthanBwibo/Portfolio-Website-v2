@@ -1,5 +1,33 @@
 export const PROJECTS = [
     {
+      id: 'acdos-crew-mobility',
+      title: 'ACDOS - Crew Mobility Optimisation',
+      year: '2026',
+      category: 'Optimisation / Mobile',
+      short: 'Dispatch and communication system that gets Kenya Airways crew from Nairobi to JKIA on time.',
+      description:
+        'Final-year capstone built in collaboration with Kenya Airways ground transport. ACDOS plans how pilots and cabin crew are collected from pickup points across Nairobi and delivered to JKIA before their duty report times, and re-plans when flights change or standby crew are activated. A hybrid Genetic Algorithm and Adaptive Large Neighbourhood Search solver handles capacitated vehicle routing with hard time windows, a Random Forest model estimates journey times from synthetic trip logs calibrated with live traffic data, and a native Android app connects dispatchers, drivers and crew through pickup ETAs, preset messaging and push alerts.',
+      tags: ['Kotlin', 'Python', 'FastAPI', 'Supabase', 'PostGIS', 'Scikit-learn', 'Genetic Algorithm'],
+      image: null, // TODO: add image
+      gradient: 'from-sky-900/40 to-indigo-900/30',
+      github: 'https://github.com/EthanBwibo/ACDOS',
+      website: null,
+    },
+    {
+      id: 'bombands-games',
+      title: 'BOMBANDS',
+      year: '2026',
+      category: 'Web / Games',
+      short: 'A word-and-logic games platform with six playable games.',
+      description:
+        'A NYT Games-style platform featuring Wordle, Scrabble, Crossword, Word Search, Sudoku and Hangman, with authentication and a custom home page. Built through a team Git-workflow project and extended into a full individual build, with daily and practice modes, animations, dark and light themes, and algorithmic puzzle generation for Crossword and Sudoku. Scrabble validates the main word and every crossing word, with bonus squares and rack shuffling.',
+      tags: ['JavaScript', 'Git', 'GitHub Pages'],
+      image: '/media/BOMBANDS.png',
+      gradient: 'from-amber-900/40 to-orange-900/30',
+      github: 'https://github.com/EthanBwibo/BOMBANDS',
+      website: 'https://is-project-2026.github.io/bombands-166488/',
+    },
+    {
     id: 'rafiki-chatbot',
     title: 'Rafiki IT Chatbot',
     year: '2026',

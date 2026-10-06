@@ -234,7 +234,7 @@ export default function LifeOutside() {
             <div>
               <p className="font-syne font-bold text-white text-2xl">Nairobi</p>
               <p className="text-gray-400 text-sm font-medium">Kenya 🇰🇪</p>
-              <p className="text-gray-600 text-[10px] mt-2 uppercase tracking-widest">EAT — UTC+3</p>
+              <p className="text-gray-600 text-[10px] mt-2 uppercase tracking-widest">EAT - UTC+3</p>
             </div>
             <div className="mt-4 flex items-center gap-2 border-t border-white/5 pt-4">
               <Heart size={12} className="text-gold" />

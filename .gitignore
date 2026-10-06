@@ -5,3 +5,4 @@ build
 .next/
 out
 .next
+.env
