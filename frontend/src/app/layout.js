@@ -22,32 +22,32 @@ export const metadata = {
   description:
     'Personal portfolio of Ethan Bwibo - Software Developer, Data Analyst, and Strathmore Tennis Captain. final year ICS student at Strathmore University, Nairobi.',
   keywords: ['Ethan Bwibo','Software Developer', 'Data Analyst', 'Nairobi', 'Strathmore University'],
-  images: ['frontend/public/media/favicon-32x32.png'],
+  images: ['/media/favicon-32x32.png'],
   icons: {
     icon: [
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        url: 'frontend\\public\\media\\icons\\favicon-32x32.png',
+        url: '/media/icons/favicon-32x32.png',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        url: 'frontend\\public\\media\\icons\\favicon-16x16.png',
+        url: '/media/icons/favicon-16x16.png',
       },
     ],
     apple: [
         {
             rel: 'apple-touch-icon',
-            url: 'frontend\\public\\media\\icons\\apple-icon.png',
+            url: '/media/icons/apple-icon.png',
         }
     ],
       shortcut: [
         {
             rel: 'shortcut icon',
-            url: 'frontend\\public\\media\\icons\\favicon.ico',
+            url: '/media/icons/favicon.ico',
         }
     ],
   },

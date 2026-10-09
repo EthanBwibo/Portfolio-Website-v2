@@ -9,6 +9,15 @@ async function getAccessToken() {
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
 
+  if (!clientId || !clientSecret || !refreshToken) {
+    console.error('Missing Spotify environment variables:', {
+      hasClientId: !!clientId,
+      hasClientSecret: !!clientSecret,
+      hasRefreshToken: !!refreshToken,
+    });
+    throw new Error('Missing Spotify environment variables');
+  }
+
   const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
 
   const response = await fetch(TOKEN_URL, {
@@ -25,7 +34,12 @@ async function getAccessToken() {
   });
 
   const data = await response.json();
-  if (!data.access_token) throw new Error('Failed to get access token');
+
+  if (!response.ok || !data.access_token) {
+    console.error('Spotify token refresh rejected by server:', data);
+    throw new Error(data.error_description || 'Failed to get access token');
+  }
+
   return data.access_token;
 }
 
@@ -58,6 +72,6 @@ export async function GET() {
     });
   } catch (error) {
     console.error('Spotify API error:', error.message);
-    return NextResponse.json({ isPlaying: false });
+    return NextResponse.json({ isPlaying: false, error: error.message });
   }
 }
