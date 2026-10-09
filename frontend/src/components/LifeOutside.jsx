@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Music2, Music, MapPin, Heart, Activity } from 'lucide-react';
+import { Music2, Music, MapPin, Heart, Activity, ArrowUpRight } from 'lucide-react';
 
 /* ──────────────────────────────
    Tennis Ball (Current Logic Kept)
@@ -31,7 +31,7 @@ function TennisBall() {
 }
 
 /* ──────────────────────────────
-   Spotify Widget (Polished UI)
+   Spotify Widget (Updated with Green Glow Hover)
 ────────────────────────────── */
 function SpotifyWidget() {
   const [track, setTrack] = useState(null);
@@ -56,7 +56,7 @@ function SpotifyWidget() {
   }, []);
 
   return (
-    <div className="glass gold-border rounded-2xl p-5 h-full flex flex-col group hover:border-gold/50 transition-all duration-500">
+    <div className="glass gold-border rounded-2xl p-5 h-full flex flex-col group hover:border-[#1DB954]/60 hover:shadow-[0_0_30px_rgba(29,185,84,0.18)] transition-all duration-500">
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-2">
           <Music2 size={16} className="text-[#1DB954]" />
@@ -65,7 +65,7 @@ function SpotifyWidget() {
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" 
           alt="Spotify" 
-          className="h-4 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+          className="h-4 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
         />
       </div>
 
@@ -84,7 +84,7 @@ function SpotifyWidget() {
             </div>
           )}
           <div className="flex-1 min-w-0">
-            <a href={track.songUrl} target="_blank" rel="noopener noreferrer" className="block text-white font-bold text-sm truncate hover:text-gold transition-colors">
+            <a href={track.songUrl} target="_blank" rel="noopener noreferrer" className="block text-white font-bold text-sm truncate hover:text-[#1DB954] transition-colors">
               {track.title}
             </a>
             <p className="text-gray-400 text-xs truncate">{track.artist}</p>
@@ -118,8 +118,67 @@ function SpotifyWidget() {
 }
 
 /* ──────────────────────────────
-   Strava Ticker (Polished UI)
+   Strava Card (Merged & Styled with Orange Glow)
 ────────────────────────────── */
+function StravaCard() {
+  return (
+    <a
+      href="https://www.strava.com/athletes"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="glass gold-border rounded-2xl p-5 h-full flex flex-col justify-between group hover:border-[#FC4C02]/60 hover:shadow-[0_0_30px_rgba(252,76,2,0.18)] transition-all duration-500"
+    >
+      <div>
+        <div className="flex justify-between items-center mb-6">
+          <div className="flex items-center gap-2">
+            <Activity size={18} className="text-[#FC4C02]" />
+            <span className="text-[11px] text-gray-400 uppercase tracking-[0.2em] font-syne font-bold">Field Activity</span>
+          </div>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Strava_Logo.svg"
+            alt="Strava"
+            className="h-3 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+          />
+        </div>
+
+        <div className="flex items-center justify-between gap-4 my-auto">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-xl bg-[#FC4C02]/10 border border-[#FC4C02]/20 flex items-center justify-center text-[#FC4C02] group-hover:scale-105 group-hover:bg-[#FC4C02] group-hover:text-white transition-all duration-300">
+              <Activity size={24} />
+            </div>
+            <div>
+              <p className="text-white font-syne font-bold text-base group-hover:text-gold transition-colors">
+                Follow on Strava
+              </p>
+              <p className="text-gray-400 text-xs">
+                Rides across Nairobi, pacing splits & endurance sessions.
+              </p>
+            </div>
+          </div>
+
+          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 group-hover:border-[#FC4C02]/40 text-xs text-gray-300 group-hover:text-white transition-all">
+            <span>View Profile</span>
+            <ArrowUpRight size={13} className="text-[#FC4C02] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="w-1.5 h-1.5 rounded-full bg-[#FC4C02] animate-pulse" />
+          <p className="text-[9px] text-gray-600 uppercase font-inter tracking-tighter">Strava Athlete Hub</p>
+        </div>
+        <span className="sm:hidden text-[10px] text-gray-400 flex items-center gap-1">
+          Profile <ArrowUpRight size={12} className="text-[#FC4C02]" />
+        </span>
+      </div>
+    </a>
+  );
+}
+
+/* ──────────────────────────────
+   Strava Ticker (Preserved for future use)
+──────────────────────────────
 function StravaTicker() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -156,17 +215,17 @@ function StravaTicker() {
               className="relative pl-4 border-l border-gold/10 hover:border-gold/40 transition-colors"
             >
                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="text-white text-sm font-medium leading-none mb-1">{a.name}</p>
-                    <div className="flex items-center gap-2 text-[10px] text-gray-500 uppercase">
-                      <span className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10">{a.type}</span>
-                      <span>•</span>
-                      <span>{new Date(a.date).toLocaleDateString()}</span>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-gold font-syne font-bold text-sm">{a.distance} <span className="text-[10px] opacity-60 font-inter">KM</span></p>
-                  </div>
+                 <div>
+                   <p className="text-white text-sm font-medium leading-none mb-1">{a.name}</p>
+                   <div className="flex items-center gap-2 text-[10px] text-gray-500 uppercase">
+                     <span className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10">{a.type}</span>
+                     <span>•</span>
+                     <span>{new Date(a.date).toLocaleDateString()}</span>
+                   </div>
+                 </div>
+                 <div className="text-right">
+                   <p className="text-gold font-syne font-bold text-sm">{a.distance} <span className="text-[10px] opacity-60 font-inter">KM</span></p>
+                 </div>
                </div>
             </motion.div>
           ))}
@@ -185,6 +244,7 @@ function StravaTicker() {
     </div>
   );
 }
+────────────────────────────── */
 
 /* ──────────────────────────────
    Main LifeOutside Component
@@ -212,9 +272,9 @@ export default function LifeOutside() {
               </p>
 
               <div className="flex gap-3 mt-4">
-              <p className="text-gray-400 text-sm leading-relaxed max-w-xl mt-3">
-                Off the court, you'll find me cycling through Nairobi, keeping tabs on Arsenal, or debating why the beautiful game is the greatest sport ever invented.
-              </p>
+                <p className="text-gray-400 text-sm leading-relaxed max-w-xl mt-3">
+                  Off the court, you'll find me cycling through Nairobi, keeping tabs on Arsenal, or debating why the beautiful game is the greatest sport ever invented.
+                </p>
               </div>
 
               <div className="flex gap-3 mt-4">
@@ -234,7 +294,7 @@ export default function LifeOutside() {
             <div>
               <p className="font-syne font-bold text-white text-2xl">Nairobi</p>
               <p className="text-gray-400 text-sm font-medium">Kenya 🇰🇪</p>
-              <p className="text-gray-600 text-[10px] mt-2 uppercase tracking-widest">EAT — UTC+3</p>
+              <p className="text-gray-600 text-[10px] mt-2 uppercase tracking-widest">EAT - UTC+3</p>
             </div>
             <div className="mt-4 flex items-center gap-2 border-t border-white/5 pt-4">
               <Heart size={12} className="text-gold" />
@@ -247,9 +307,9 @@ export default function LifeOutside() {
             <SpotifyWidget />
           </motion.div>
 
-          {/* Strava Ticker */}
+          {/* Merged Strava Card */}
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-2">
-            <StravaTicker />
+            <StravaCard />
           </motion.div>
         </div>
       </div>

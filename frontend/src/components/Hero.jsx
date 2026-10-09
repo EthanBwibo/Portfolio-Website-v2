@@ -140,6 +140,7 @@ export default function Hero() {
         >
           Building impactful tech solutions through code, design, and data.
           Final year ICS student at Strathmore University, Nairobi.
+          Full-Stack, AI Systems & Data Analytics.
         </motion.p>
 
         {/* CTA Buttons */}
