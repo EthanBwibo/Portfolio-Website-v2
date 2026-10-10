@@ -66,3 +66,40 @@ body {
     font-weight: 500;
   }
 }
+
+/* Continuous Spotify Marquee with Initial Rest Pause */
+@keyframes continuousMarquee {
+  0%, 15% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-continuous-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: continuousMarquee 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-continuous-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Slim Spotify Green Scrollbar */
+.spotify-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+.spotify-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+.spotify-scrollbar::-webkit-scrollbar-thumb {
+  background: #1DB954;
+  border-radius: 9999px;
+}
+.spotify-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1ed760;
+}
