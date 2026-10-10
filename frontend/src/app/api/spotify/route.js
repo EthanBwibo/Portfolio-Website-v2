@@ -3,20 +3,12 @@ export const dynamic = 'force-dynamic';
 
 const TOKEN_URL = 'https://accounts.spotify.com/api/token';
 const NOW_PLAYING_URL = 'https://api.spotify.com/v1/me/player/currently-playing';
+const RECENTLY_PLAYED_URL = 'https://api.spotify.com/v1/me/player/recently-played?limit=5';
 
 async function getAccessToken() {
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
-
-  if (!clientId || !clientSecret || !refreshToken) {
-    console.error('Missing Spotify environment variables:', {
-      hasClientId: !!clientId,
-      hasClientSecret: !!clientSecret,
-      hasRefreshToken: !!refreshToken,
-    });
-    throw new Error('Missing Spotify environment variables');
-  }
 
   const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
 
@@ -28,18 +20,15 @@ async function getAccessToken() {
     },
     body: new URLSearchParams({
       grant_type: 'refresh_token',
-      refresh_token: refreshToken,
+      refresh_token: refreshToken || '',
     }),
     cache: 'no-store',
   });
 
   const data = await response.json();
-
   if (!response.ok || !data.access_token) {
-    console.error('Spotify token refresh rejected by server:', data);
-    throw new Error(data.error_description || 'Failed to get access token');
+    throw new Error('Failed to fetch Spotify access token');
   }
-
   return data.access_token;
 }
 
@@ -47,31 +36,51 @@ export async function GET() {
   try {
     const accessToken = await getAccessToken();
 
-    const response = await fetch(NOW_PLAYING_URL, {
-      headers: { Authorization: `Bearer ${accessToken}` },
-      cache: 'no-store',
-    });
+    // Fetch Current Playing & Recent History in parallel
+    const [nowRes, recentRes] = await Promise.all([
+      fetch(NOW_PLAYING_URL, {
+        headers: { Authorization: `Bearer ${accessToken}` },
+        cache: 'no-store',
+      }),
+      fetch(RECENTLY_PLAYED_URL, {
+        headers: { Authorization: `Bearer ${accessToken}` },
+        cache: 'no-store',
+      }),
+    ]);
 
-    if (response.status === 204 || response.status === 404) {
-      return NextResponse.json({ isPlaying: false });
+    let currentSong = null;
+    if (nowRes.status === 200) {
+      const data = await nowRes.json();
+      if (data?.item) {
+        currentSong = {
+          isPlaying: data.is_playing,
+          title: data.item.name,
+          artist: data.item.artists?.map((a) => a.name).join(', '),
+          album: data.item.album?.name,
+          albumArt: data.item.album?.images?.[0]?.url || null,
+          songUrl: data.item.external_urls?.spotify,
+        };
+      }
     }
 
-    const song = await response.json();
-
-    if (!song || !song.item) {
-      return NextResponse.json({ isPlaying: false });
+    let recentTracks = [];
+    if (recentRes.status === 200) {
+      const recentData = await recentRes.json();
+      recentTracks = (recentData.items || []).map((item) => ({
+        title: item.track?.name,
+        artist: item.track?.artists?.map((a) => a.name).join(', '),
+        albumArt: item.track?.album?.images?.[0]?.url || null,
+        songUrl: item.track?.external_urls?.spotify,
+      }));
     }
 
     return NextResponse.json({
-      isPlaying: song.is_playing,
-      title: song.item.name,
-      artist: song.item.artists.map((a) => a.name).join(', '),
-      album: song.item.album.name,
-      albumArt: song.item.album.images[0]?.url || null,
-      songUrl: song.item.external_urls.spotify,
+      isPlaying: currentSong?.isPlaying ?? false,
+      current: currentSong,
+      recent: recentTracks,
     });
   } catch (error) {
     console.error('Spotify API error:', error.message);
-    return NextResponse.json({ isPlaying: false, error: error.message });
+    return NextResponse.json({ isPlaying: false, current: null, recent: [] });
   }
 }
