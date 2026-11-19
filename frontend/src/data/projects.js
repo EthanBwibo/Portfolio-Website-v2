@@ -6,12 +6,26 @@ export const PROJECTS = [
       category: 'Optimisation / Mobile',
       short: 'Dispatch and communication system that gets Kenya Airways crew from Nairobi to JKIA on time.',
       description:
-        'Final-year capstone built in collaboration with Kenya Airways ground transport. ACDOS plans how pilots and cabin crew are collected from pickup points across Nairobi and delivered to JKIA before their duty report times, and re-plans when flights change or standby crew are activated. A hybrid Genetic Algorithm and Adaptive Large Neighbourhood Search solver handles capacitated vehicle routing with hard time windows, a Random Forest model estimates journey times from synthetic trip logs calibrated with live traffic data, and a native Android app connects dispatchers, drivers and crew through pickup ETAs, preset messaging and push alerts.',
-      tags: ['Kotlin', 'Python', 'FastAPI', 'Supabase', 'PostGIS', 'Scikit-learn', 'Genetic Algorithm'],
-      image: null, // TODO: add image
+        'Final-year capstone built with Kenya Airways ground transport. ACDOS gets pilots and cabin crew from pickup points across Nairobi to JKIA before their report times, and re-plans when flights change or a vehicle breaks down. A GA-ALNS solver handles capacitated routing with time windows, a Random Forest model predicts journey times, and an offline-first Android app connects dispatchers, drivers and crew.',
+      tags: ['Kotlin', 'Python', 'FastAPI', 'Supabase', 'PostGIS', 'Scikit-learn', 'Genetic Algorithm', 'Azure'],
+      image: '/media/ACDOS.png',
       gradient: 'from-sky-900/40 to-indigo-900/30',
       github: 'https://github.com/EthanBwibo/ACDOS',
       website: null,
+    },
+    {
+      id: 'blobeye',
+      title: 'Blobeye',
+      year: '2026',
+      category: '3D Web / Games',
+      short: 'An interactive blueprint tribute to the Subaru Impreza WRX STI, ending in a Safari Rally game.',
+      description:
+        'A scroll-driven 3D blueprint tribute to the 2004 Subaru Impreza WRX STI. Open up the car, turn the flat-four engine and rev it to hear the boxer rumble, generated live in the browser. On the last sheet the car drives off into a Safari Rally time trial across Naivasha, Hell\'s Gate and Roysambu, with pace notes, ghost replays and a shared leaderboard.',
+      tags: ['TypeScript', 'Three.js', 'Web Audio', 'Vite', 'Supabase', 'Vitest'],
+      image: '/media/Blobeye.png',
+      gradient: 'from-blue-900/40 to-amber-900/30',
+      github: 'https://github.com/EthanBwibo/blobeye',
+      website: 'https://blobeye.vercel.app',
     },
     {
       id: 'bombands-games',

@@ -223,7 +223,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-gray-400 mb-12 max-w-xl"
         >
-          Click any project for a detailed view. From Android apps to AI chatbots and data dashboards.
+          Click any project for a detailed view. From Android apps and route optimisation to AI chatbots, data dashboards and 3D web.
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
